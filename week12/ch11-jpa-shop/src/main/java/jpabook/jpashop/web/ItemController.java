@@ -1,5 +1,6 @@
 package jpabook.jpashop.web;
 
+import jpabook.jpashop.domain.item.Album;
 import jpabook.jpashop.domain.item.Book;
 import jpabook.jpashop.domain.item.Item;
 import jpabook.jpashop.service.ItemService;
@@ -28,7 +29,7 @@ public class ItemController {
     }
 
     @RequestMapping(value = "/items/new", method = RequestMethod.POST)
-    public String create(Book item) {
+    public String create(Album item) {
 
         itemService.saveItem(item);
         return "redirect:/items";
